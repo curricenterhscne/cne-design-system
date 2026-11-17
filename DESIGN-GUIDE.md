@@ -1,4 +1,7 @@
-# 충남 고교학점제 온마당 — 디자인 시스템 v1.0
+# 충남 고교학점제 온마당 — 디자인 시스템 v2.0
+
+> **2026-11-18 v2.0**: 디자인 업체 최종 가이드(「충남교육청_온마당_디자인가이드.pdf」)를 반영했다.
+> 아래 본문의 원리(의미 토큰·배지 의미·캐릭터 사용)는 그대로이고, **색·모서리·상태 값은 `CHANGELOG.md`와 `tokens/design-tokens.css` 주석이 최신**이다.
 
 > **꾸꾸클럽 디자인 시스템** · C-1 라이트 도미넌트
 > 참학력 온라인 공동교육과정 멤버쉽 캐릭터 "꾸꾸클럽" 브랜드 기반
@@ -192,7 +195,7 @@ C-1은 라이트 도미넌트가 기본입니다. 187개교 데이터·강사인
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <!-- 디자인 시스템 (CDN 또는 GitHub Pages 경로) -->
   <link rel="stylesheet" href="https://<your-pages>/cne-design-system/tokens/design-tokens.css">
   <link rel="stylesheet" href="https://<your-pages>/cne-design-system/components/components.css">
@@ -209,7 +212,7 @@ C-1은 라이트 도미넌트가 기본입니다. 187개교 데이터·강사인
 
 ---
 
-## 9. v1.0 범위 & 다음 단계
+## 9. 범위 & 다음 단계 (v1.0 기준 기록)
 
 **v1.0에 포함**: 색 팔레트·서체·간격·핵심 컴포넌트 5개·배지·캐릭터 자산·빈 상태.
 **의도적으로 제외**(실제 모듈을 만들며 자라남): 모달·탭·아코디언·토스트·차트·페이지네이션·

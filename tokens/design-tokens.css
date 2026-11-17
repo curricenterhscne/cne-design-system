@@ -1,121 +1,142 @@
 /* =============================================================================
-   충남 고교학점제 종합지원 온마당 · 디자인 시스템 v1.0
+   충남 고교학점제 종합지원 온마당 · 디자인 시스템 v2.0  (2026-11-18)
    design-tokens.css — 단일 진실원 (Single Source of Truth)
 
-   방향: C-1 라이트 도미넌트
-   기반: 참학력 온라인 공동교육과정 멤버쉽 캐릭터 "꾸꾸클럽" 브랜드
-   색상: 꾸꾸클럽 캐릭터 굿즈 개발 자료집(2026)에서 직접 추출
+   v2.0: 디자인 업체 최종 가이드(「충남교육청_온마당_디자인가이드.pdf」, 2026-11-17) 반영.
+         토큰 **이름은 v1과 같다** — 값만 바꿨으므로 v1을 쓰던 앱은 그대로 따라온다.
+         가이드에 새로 생긴 색·모서리·상태는 새 토큰으로 더했다(아래 [v2 신규]).
+         바뀐 값 목록은 CHANGELOG.md.
+   v1.0: 꾸꾸클럽 캐릭터 굿즈 자료집(2026)에서 추출한 임시 스킨.
 
-   사용법: 모든 하위 사이트/웹앱의 최상단에서 import
-     <link rel="stylesheet" href="https://<your-pages>/cne-design-system/tokens/design-tokens.css">
-   또는 CSS 내부에서
-     @import url("../cne-design-system/tokens/design-tokens.css");
+   사용법: 모든 하위 사이트/웹앱의 최상단에서 import (CDN은 커밋 해시로 고정해서 쓸 것)
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/curricenterhscne/cne-design-system@<커밋>/tokens/design-tokens.css">
 
    주의: 이 파일은 변수만 정의합니다. 실제 컴포넌트 스타일은 components.css 참조.
+   글자로 쓰는 색은 흰 바탕·옅은 바탕 모두 4.5:1 이상인 단계만 쓴다(각 줄 주석의 대비값).
    ============================================================================= */
 
 :root {
   /* ---------------------------------------------------------------------------
      1. 색 — Color
-     꾸꾸클럽 핵심 3색: 진블루(브랜드) · 라이트블루(배경) · 그린(액센트=네잎클로버)
-     각 색은 50~900 램프로 확장. 원본 추출값은 [원본] 주석으로 표기.
+     가이드 v2: 브랜드 블루 · 라이트 스카이 블루(배경) · 라임그린 · 퍼플 · 라이트 블루
+     각 색은 50~900 램프로 확장. 가이드 원값은 [가이드] 주석으로 표기.
      --------------------------------------------------------------------------- */
 
-  /* --- 브랜드 진블루 (Primary) --- 캐릭터 코 도트·책·헤드라인·버튼 -------------- */
-  --kkuk-blue-50:  #EEF2FB;
-  --kkuk-blue-100: #DCE4F6;
-  --kkuk-blue-200: #B9C8EC;
-  --kkuk-blue-300: #94AAE0;
-  --kkuk-blue-400: #6F8BD3;
-  --kkuk-blue-500: #4F6EBE;   /* [원본] rgb(79,110,190) — 메인 브랜드 진블루 */
-  --kkuk-blue-600: #41599C;
-  --kkuk-blue-700: #344779;
-  --kkuk-blue-800: #283659;   /* 관리자 표면용 딥블루 (C-2 분기 시 베이스) */
-  --kkuk-blue-900: #1E2A45;
+  /* --- 브랜드 블루 (Primary) --- 메인 타이틀·히어로 배경·주 단추 ------------------ */
+  --kkuk-blue-50:  #F3F5FD;
+  --kkuk-blue-100: #E7EAFA;
+  --kkuk-blue-200: #CBD2F4;
+  --kkuk-blue-300: #A8B4EE;
+  --kkuk-blue-400: #7D8FE5;
+  --kkuk-blue-500: #526ADC;   /* [가이드] 브랜드 블루 — 흰 글자 4.72:1 */
+  --kkuk-blue-600: #3F54C4;   /* 글자용 브랜드 — 흰 바탕 6.41, 옅은 바탕 5.9 이상 */
+  --kkuk-blue-700: #32439D;
+  --kkuk-blue-800: #263276;   /* 관리자 표면용 딥블루 */
+  --kkuk-blue-900: #19224E;
 
-  /* --- 라이트 블루 (Surface / Background) --- 페이지 배경·도트 패턴 -------------- */
-  --kkuk-sky-50:  #F4FBFE;
-  --kkuk-sky-100: #E9F6FD;
-  --kkuk-sky-200: #DAF2FC;   /* [원본] rgb(218,242,252) — 캐릭터 PDF 페이지 배경 */
-  --kkuk-sky-300: #BFE6F8;
-  --kkuk-sky-400: #9DD6F1;
+  /* --- 라이트 스카이 블루 (Surface / Background) --- 섹션 배경·이동 경로 ------------ */
+  --kkuk-sky-50:  #F5FCFF;
+  --kkuk-sky-100: #ECF9FF;
+  --kkuk-sky-200: #D7F3FF;   /* [가이드] 라이트 스카이 블루 */
+  --kkuk-sky-300: #B5E8FD;
+  --kkuk-sky-400: #8ED9F7;
 
-  /* --- 그린 (Accent) --- 네잎클로버=토꾸미 부적, '권장/행운/성공' 의미 ----------- */
-  --kkuk-green-50:  #EEF8EE;
-  --kkuk-green-100: #DCF1DC;
-  --kkuk-green-200: #B6E3B7;
-  --kkuk-green-300: #7BCE7C;  /* [원본] rgb(123,206,124) — 네잎클로버 그린 */
-  --kkuk-green-400: #5BB85C;
-  --kkuk-green-500: #3F8941;  /* 그린 텍스트(가독성 확보용 진한 버전) */
-  --kkuk-green-600: #2F6831;
+  /* --- 라임그린 (Accent) --- 진로·학업 설계 보조, '권장' 의미 -------------------- */
+  --kkuk-green-50:  #E4FEED;
+  --kkuk-green-100: #CAFFDA;
+  --kkuk-green-200: #A8FFC2;  /* [가이드] 라이트 라임그린 — 캐릭터 설명·카드 영역 */
+  --kkuk-green-300: #78F8A3;  /* [가이드] 라임그린 — 흰 글자 금지(1.33:1), 검정 글자 15.75:1 */
+  --kkuk-green-400: #59C77E;
+  --kkuk-green-500: #3C7C52;  /* 그린 글자용 — 흰 바탕 5.0 */
+  --kkuk-green-600: #2D5D3E;  /* 옅은 그린 위 글자 — 7.17 */
 
-  /* --- 크림 (Warm Neutral) --- 표지 배경, 따뜻한 보조 배경 --------------------- */
-  --kkuk-cream-50:  #FFFFF4;
-  --kkuk-cream-100: #FFFFE7;  /* [원본] rgb(255,255,231) — 표지 크림 배경 */
-  --kkuk-cream-200: #FAF7DE;
+  /* --- 레몬 (Warm) --- 텍스트 배경 보조 (v1 '크림' 자리) ------------------------- */
+  --kkuk-cream-50:  #FFFFF0;
+  --kkuk-cream-100: #FFFFC4;  /* [가이드] 레몬 */
+  --kkuk-cream-200: #F7F3A8;
 
-  /* --- 잉크 & 중립 회색 (Ink / Neutral) --- 캐릭터 윤곽선·본문 텍스트 ----------- */
-  --kkuk-ink:       #221F20;  /* [원본] rgb(34,31,32) — 캐릭터 윤곽·손글씨 */
-  --kkuk-gray-900:  #2B2A2B;
-  --kkuk-gray-700:  #5B5B5C;
-  --kkuk-gray-500:  #8A8A8B;
-  --kkuk-gray-300:  #C9C9CA;
-  --kkuk-gray-200:  #E2E2E3;
-  --kkuk-gray-100:  #F0F0F1;
+  /* --- [v2 신규] 퍼플 --- 알림·소통 마당 보조 ---------------------------------- */
+  --kkuk-purple-100: #EDE3FF;
+  --kkuk-purple-500: #8B5ED4;  /* [가이드] 퍼플 — 흰 글자 4.52, 검정 글자 4.65 */
+  --kkuk-purple-600: #7C52B8;  /* 퍼플 글자용 — 흰 바탕 5.59 */
+
+  /* --- [v2 신규] 라이트 블루 · 라이트 핑크 --- 4대 안전망 보조 / 캐릭터 설명 ---- */
+  --kkuk-cyan-100: #E8F8FF;
+  --kkuk-cyan-400: #61DFFF;   /* [가이드] 라이트 블루 — 흰 글자 금지(1.55:1), 검정 글자 13.5:1 */
+  --kkuk-cyan-700: #1F6F90;   /* 라이트 블루 계열 글자용 — 흰 바탕 5.62 */
+  --kkuk-pink-200: #FFD5FF;   /* [가이드] 라이트 핑크 */
+
+  /* --- 잉크 & 중립 회색 (Ink / Neutral) --------------------------------------- */
+  --kkuk-ink:       #000000;  /* [가이드] 텍스트(진하게) — 본문 */
+  --kkuk-gray-900:  #222222;
+  --kkuk-gray-700:  #333333;  /* [가이드] 텍스트(연하게) — 메뉴 */
+  --kkuk-gray-600:  #6B6B6B;  /* 보조 글자 — 흰 5.3, 옅은 하늘 4.9 */
+  --kkuk-gray-500:  #727272;  /* [가이드] 텍스트(흐리게) — 비활성 글자 전용(옅은 바탕에서 4.5 미만) */
+  --kkuk-gray-300:  #C8C8C8;  /* [가이드] 비활성 단추 */
+  --kkuk-gray-200:  #E2E4EE;  /* [가이드] 라인 */
+  --kkuk-gray-100:  #F2F3F7;
   --kkuk-white:     #FFFFFF;
 
-  /* --- 상태 색 (Semantic) --- 행정·데이터 화면용 ------------------------------ */
+  /* --- 상태 색 (Semantic) --------------------------------------------------- */
   --kkuk-success: var(--kkuk-green-500);
-  --kkuk-warning: #D98A2B;
-  --kkuk-danger:  #C9453C;
-  --kkuk-info:    var(--kkuk-blue-500);
+  --kkuk-warning: #8A4500;     /* 경고 글자 — 경고 바탕 위 5.6 */
+  --kkuk-warning-bg: #FFDDC8;  /* [가이드] 경고 */
+  --kkuk-danger:  #C41E22;     /* 오류 글자 — 흰 바탕 5.91 (가이드 오류색은 글자로 쓰기에 3.73이라 따로 둠) */
+  --kkuk-error-line: #FF2B2E;  /* [가이드] 오류 — 테두리 전용 */
+  --kkuk-info:    var(--kkuk-blue-600);
 
   /* ---------------------------------------------------------------------------
      2. 의미 기반 토큰 — Semantic tokens
      컴포넌트는 가급적 원시 색(--kkuk-blue-500)이 아니라 아래 의미 토큰을 참조할 것.
-     향후 다크모드/관리자 표면 전환 시 이 레이어만 바꾸면 됨.
      --------------------------------------------------------------------------- */
 
   /* 표면 (Surfaces) */
-  --color-bg:            var(--kkuk-sky-200);   /* 페이지 기본 배경 (C-1 라이트 도미넌트) */
+  --color-bg:            var(--kkuk-sky-200);   /* 페이지 기본 배경 */
   --color-bg-subtle:     var(--kkuk-sky-100);
   --color-surface:       var(--kkuk-white);     /* 카드·패널 */
   --color-surface-alt:   var(--kkuk-sky-50);
-  --color-surface-warm:  var(--kkuk-cream-100); /* 자료집/에디토리얼 모먼트 */
+  --color-surface-warm:  var(--kkuk-cream-100);
 
   /* 텍스트 (Text) */
-  --color-text:          var(--kkuk-ink);
-  --color-text-muted:    var(--kkuk-gray-700);
-  --color-text-subtle:   var(--kkuk-gray-500);
+  --color-text:          var(--kkuk-ink);        /* [가이드] 본문 #000 */
+  --color-text-muted:    var(--kkuk-gray-700);   /* [가이드] 메뉴 #333 */
+  --color-text-subtle:   var(--kkuk-gray-600);
+  --color-text-disabled: var(--kkuk-gray-500);   /* [v2 신규] */
   --color-text-on-brand: var(--kkuk-white);
-  --color-text-brand:    var(--kkuk-blue-600);  /* 본문 중 강조 텍스트 */
-  --color-heading:       var(--kkuk-blue-900);
+  --color-text-brand:    var(--kkuk-blue-600);
+  --color-heading:       var(--kkuk-ink);
 
   /* 브랜드 / 액션 (Brand / Action) */
   --color-brand:         var(--kkuk-blue-500);
   --color-brand-hover:   var(--kkuk-blue-600);
   --color-brand-active:  var(--kkuk-blue-700);
+  --color-brand-soft:    var(--kkuk-sky-200);    /* [v2 신규] 가이드 단추·메뉴 마우스오버 바탕 #D7F3FF */
   --color-accent:        var(--kkuk-green-300);
   --color-accent-text:   var(--kkuk-green-500);
+  --color-disabled:      var(--kkuk-gray-300);   /* [v2 신규] 비활성 단추 #C8C8C8 */
+  --color-current:       var(--kkuk-green-300);  /* [v2 신규] 머리글 단추 현재 위치(라임) */
 
   /* 경계선 (Borders) */
-  --color-border:        rgba(79, 110, 190, 0.18); /* 진블루 18% — 라이트 배경 위 */
-  --color-border-strong: rgba(79, 110, 190, 0.35);
-  --color-border-subtle: rgba(34, 31, 32, 0.08);
+  --color-border:        var(--kkuk-gray-200);  /* [가이드] 라인 #E2E4EE */
+  --color-border-strong: rgba(82, 106, 220, 0.40);
+  --color-border-subtle: rgba(0, 0, 0, 0.06);
+  --color-error-line:    var(--kkuk-error-line); /* [v2 신규] */
+  --color-warning-bg:    var(--kkuk-warning-bg); /* [v2 신규] */
 
-  /* 포커스 링 (Accessibility) */
-  --color-focus-ring:    var(--kkuk-blue-400);
+  /* 포커스 링 — 가이드: 키보드 포커스 stroke 3 #526ADC */
+  --color-focus-ring:    var(--kkuk-blue-500);
+  --focus-width:         3px;                    /* [v2 신규] */
 
-  /* 관리자 표면 (Admin surface) — 187개교 데이터·강사인력풀 등 행정 화면 전용.
-     학생 화면과 시각적으로 분기하되 같은 색조 유지. 필요한 화면에서만 .surface-admin 적용. */
-  --color-admin-bg:      #F5F7FB;
+  /* 관리자 표면 (Admin surface) */
+  --color-admin-bg:      #F5F7FD;
   --color-admin-surface: var(--kkuk-white);
   --color-admin-header:  var(--kkuk-blue-800);
-  --color-admin-border:  rgba(40, 54, 89, 0.16);
+  --color-admin-border:  rgba(38, 50, 118, 0.16);
 
   /* ---------------------------------------------------------------------------
      3. 서체 — Typography
-     본문: Pretendard (한글 가독성 최우선, 검증된 조합)
+     본문: Pretendard (가이드: 제목 ExtraBold · 본문 Regular/Medium)
+     CDN은 pretendardvariable-dynamic-subset.min.css 를 쓴다(전체 파일 2MB를 받지 않는다).
      강조/헤드라인: Pretendard 굵게 — 캐릭터 워드마크의 손글씨는 이미지 자산으로만 사용
      (웹폰트 손글씨는 가독성 저하 위험 → 본문엔 쓰지 않음)
      숫자/데이터: tnum (등폭 숫자) — 187개교 표 정렬용
@@ -149,6 +170,13 @@
   --weight-medium:   500;
   --weight-semibold: 600;
   --weight-bold:     700;
+  --weight-extrabold: 800;   /* [v2 신규] 가이드 제목·카드 제목 */
+
+  /* [v2 신규] 가이드 글자 크기 — PC 최대값, 모바일 최소값 사이를 화면 폭에 따라 */
+  --text-hero:    clamp(2.5rem, 3.8vw, 3.4375rem);  /* 메인 대제목 40 → 55 */
+  --text-section: clamp(1.5625rem, 2.8vw, 2.5rem);  /* 섹션 제목 25 → 40 */
+  --text-lead:    clamp(0.9375rem, 1.7vw, 1.5625rem); /* 섹션 내용 15 → 25 (Medium) */
+  --text-card:    clamp(0.9375rem, 1.4vw, 1.25rem);  /* 카드 제목 15 → 20 (ExtraBold) */
 
   /* ---------------------------------------------------------------------------
      4. 간격 — Spacing (4px 베이스, 6단계)
@@ -166,11 +194,15 @@
      5. 모서리 반경 — Radius
      꾸꾸클럽 캐릭터는 둥글둥글 → 시스템도 부드러운 반경 선호
      --------------------------------------------------------------------------- */
-  --radius-sm:   6px;
-  --radius-md:   10px;
-  --radius-lg:   16px;
-  --radius-xl:   24px;
-  --radius-pill: 999px;   /* 배지·필 */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   20px;   /* v2: 가이드 카드 모서리 20 */
+  --radius-xl:   30px;
+  --radius-pill: 999px;   /* 배지·태그·메뉴 */
+  /* [v2 신규] 가이드 부품별 모서리 */
+  --radius-btn:   15px;  /* Button01~04 */
+  --radius-card:  20px;
+  --radius-input: 30px;
 
   /* ---------------------------------------------------------------------------
      6. 그림자 — Shadow (부드럽고 옅게, 캐릭터 톤에 맞춰 과하지 않게)
@@ -178,12 +210,13 @@
   --shadow-sm:  0 1px 2px rgba(30, 42, 69, 0.06);
   --shadow-md:  0 2px 8px rgba(30, 42, 69, 0.08);
   --shadow-lg:  0 6px 20px rgba(30, 42, 69, 0.10);
-  --shadow-focus: 0 0 0 3px rgba(79, 110, 190, 0.30);
+  --shadow-focus: 0 0 0 3px rgba(82, 106, 220, 0.30);
+  --shadow-hover: 0 4px 7px rgba(0, 0, 0, 0.30);  /* [v2 신규] 가이드 카드 마우스오버 */
 
   /* ---------------------------------------------------------------------------
      7. 레이아웃 — Layout
      --------------------------------------------------------------------------- */
-  --container-max:   1120px;
+  --container-max:   1120px;   /* 가이드: 본문 1000~1280px */
   --container-wide:  1320px;  /* 187개교 데이터 테이블 등 넓은 화면 */
   --content-max:     720px;   /* 자료집 본문 가독 폭 */
 
@@ -234,7 +267,7 @@ body {
 
 /* 접근성: 포커스 가시화 */
 :focus-visible {
-  outline: 2px solid var(--color-focus-ring);
+  outline: var(--focus-width) solid var(--color-focus-ring);
   outline-offset: 2px;
 }
 

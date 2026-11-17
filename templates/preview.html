@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>꾸꾸클럽 디자인 시스템 v1.0 — 라이브 프리뷰</title>
+<title>온마당 디자인 시스템 v2.0 — 라이브 프리뷰</title>
 
 <!-- Pretendard 웹폰트 (실제 배포 시 자체 호스팅 권장) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 
 <!-- 디자인 시스템 -->
 <link rel="stylesheet" href="../tokens/design-tokens.css">
@@ -62,7 +62,7 @@
   <section style="display:grid; grid-template-columns: 1fr auto; gap: var(--space-5); align-items:center; margin-bottom: var(--space-6);">
     <div>
       <div class="kk-section-title">
-        <span class="kk-section-title__eyebrow">디자인 시스템 v1.0 · 라이브 프리뷰</span>
+        <span class="kk-section-title__eyebrow">디자인 시스템 v2.0 · 라이브 프리뷰</span>
         <h1 class="kk-section-title__heading">꾸물꾸물 느리지만,<br>천천히 꿈을 향해</h1>
         <p class="kk-section-title__sub">Kkuk-Kkuk Club Design System</p>
       </div>
@@ -76,15 +76,18 @@
 
   <!-- 2. 색 팔레트 -->
   <section class="demo-section">
-    <div class="demo-label">색 팔레트 — 꾸꾸클럽 공식 색 (PDF 추출)</div>
+    <div class="demo-label">색 팔레트 — 업체 디자인 가이드 (2026-11-17)</div>
     <div class="demo-grid">
-      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-blue-500)"></div><span class="swatch__name">브랜드 진블루</span><span class="swatch__hex">#4F6EBE · blue-500</span></div>
-      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-sky-200)"></div><span class="swatch__name">라이트 블루(배경)</span><span class="swatch__hex">#DAF2FC · sky-200</span></div>
-      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-green-300)"></div><span class="swatch__name">그린(네잎클로버)</span><span class="swatch__hex">#7BCE7C · green-300</span></div>
-      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-cream-100)"></div><span class="swatch__name">크림(따뜻한 배경)</span><span class="swatch__hex">#FFFFE7 · cream-100</span></div>
-      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-ink)"></div><span class="swatch__name">잉크(윤곽·본문)</span><span class="swatch__hex">#221F20 · ink</span></div>
+      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-blue-500)"></div><span class="swatch__name">브랜드 블루</span><span class="swatch__hex">#526ADC · blue-500</span></div>
+      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-sky-200)"></div><span class="swatch__name">라이트 스카이 블루(배경)</span><span class="swatch__hex">#D7F3FF · sky-200</span></div>
+      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-green-300)"></div><span class="swatch__name">라임그린</span><span class="swatch__hex">#78F8A3 · green-300</span></div>
+      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-cream-100)"></div><span class="swatch__name">레몬</span><span class="swatch__hex">#FFFFC4 · cream-100</span></div>
+      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-ink)"></div><span class="swatch__name">텍스트(진하게)</span><span class="swatch__hex">#000000 · ink</span></div>
+      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-purple-500)"></div><span class="swatch__name">퍼플</span><span class="swatch__hex">#8B5ED4 · purple-500</span></div>
+      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-cyan-400)"></div><span class="swatch__name">라이트 블루</span><span class="swatch__hex">#61DFFF · cyan-400</span></div>
+      <div class="swatch"><div class="swatch__chip" style="background:var(--kkuk-pink-200)"></div><span class="swatch__name">라이트 핑크</span><span class="swatch__hex">#FFD5FF · pink-200</span></div>
     </div>
-    <div style="margin-top:var(--space-5)" class="demo-label">진블루 램프</div>
+    <div style="margin-top:var(--space-5)" class="demo-label">브랜드 블루 램프</div>
     <div class="demo-row">
       <div class="swatch" style="flex:1"><div class="swatch__chip" style="background:var(--kkuk-blue-50)"></div><span class="swatch__hex">50</span></div>
       <div class="swatch" style="flex:1"><div class="swatch__chip" style="background:var(--kkuk-blue-100)"></div><span class="swatch__hex">100</span></div>
@@ -115,7 +118,7 @@
       <button class="kk-btn kk-btn--primary">기본 버튼</button>
       <button class="kk-btn kk-btn--secondary">외곽선 버튼</button>
       <button class="kk-btn kk-btn--ghost">고스트</button>
-      <button class="kk-btn kk-btn--accent">권장 (그린)</button>
+      <button class="kk-btn kk-btn--accent">검사하러 가기 (라이트 블루)</button>
       <button class="kk-btn kk-btn--primary" disabled>비활성</button>
     </div>
     <div class="demo-row">
@@ -211,7 +214,7 @@
 <footer style="background: var(--color-brand); color: #fff; padding: var(--space-6) 0; text-align:center;">
   <div style="margin:0 auto var(--space-3); background:#fff; display:inline-block; padding:var(--space-3) var(--space-5); border-radius:var(--radius-lg);"><img src="../assets/characters/kkukkuk-club-logo.svg" alt="꾸꾸클럽" style="height:120px"></div>
   <div style="font-size:var(--text-sm); opacity:0.9">충청남도교육청 · 참학력 온라인 공동교육과정</div>
-  <div style="font-size:var(--text-xs); opacity:0.7; margin-top:var(--space-1)">꾸꾸클럽 디자인 시스템 v1.0</div>
+  <div style="font-size:var(--text-xs); opacity:0.7; margin-top:var(--space-1)">온마당 디자인 시스템 v2.0</div>
 </footer>
 
 </body>

@@ -1,7 +1,7 @@
 # cne-design-system
 
-**충남 고교학점제 종합지원 온마당 디자인 시스템 v1.0**
-참학력 온라인 공동교육과정 멤버쉽 캐릭터 **꾸꾸클럽** 기반 · C-1 라이트 도미넌트
+**충남 고교학점제 종합지원 온마당 디자인 시스템 v2.0** (2026-11-18)
+디자인 업체 최종 가이드(2026-11-17) 기반 · 꾸꾸클럽 캐릭터
 
 충남 고교학점제 가족 사이트(신규 온마당 + 모든 하위 모듈·웹앱)가 한눈에 같은 가족으로
 인식되도록 하는 **단일 진실원**입니다. 모든 사이트는 이 레포의 CSS를 참조합니다.
@@ -12,8 +12,8 @@
 
 ```html
 <head>
-  <!-- 1. 본문 폰트 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  <!-- 1. 본문 폰트 — 쓰인 글자만 받는 subset판(전체 파일은 2MB라 쓰지 않는다) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <!-- 2. 디자인 토큰 (필수, 먼저) -->
   <link rel="stylesheet" href="tokens/design-tokens.css">
   <!-- 3. 컴포넌트 (선택) -->
@@ -59,11 +59,14 @@ cne-design-system/
 - **의미 토큰 우선**: `--color-brand`를 쓰고 `--kkuk-blue-500`을 직접 쓰지 않기.
 - **서체**: 본문 Pretendard, 한글 가독성 최우선.
 - **캐릭터**: 학생 화면에 적극, 행정 화면(`.surface-admin`)엔 절제.
-- **배지 의미 통일**: ★권장=그린 / ◆핵심=진블루 / 온라인=라이트블루.
+- **배지 의미 통일**: ★권장=그린 / ◆핵심=브랜드 블루 / 온라인=라이트 블루.
+- **CDN은 커밋 해시나 태그로 고정**해서 쓴다(`@main`은 바뀌는 즉시 모든 사이트에 퍼진다).
+  예: `https://cdn.jsdelivr.net/gh/curricenterhscne/cne-design-system@v2.0/tokens/design-tokens.css`
 
 ---
 
 ## 버전
 
+- **v2.0** (2026-11-18): 업체 최종 가이드 반영. 토큰·클래스 이름은 v1과 같고 값만 바뀜. 자세한 목록은 `CHANGELOG.md`.
 - **v1.0** (2026-05): 색·서체·간격·핵심 컴포넌트 5·배지·캐릭터 자산·빈 상태·관리자 표면.
 - 모달·탭·차트 등은 실제 모듈을 만들며 같은 토큰 위에서 확장 예정.
