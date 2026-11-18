@@ -6,7 +6,7 @@ description: 충남교육청 고교학점제 포털 「온마당」 디자인 �
 # 온마당 디자인 시스템 v2.1 적용
 
 온마당(onmadang.or.kr)과 그 가족 사이트가 한눈에 같은 가족으로 보이게 하는 디자인 시스템이다.
-원본 저장소: `curricenterhscne/cne-design-system` (태그 `v2.0`, 커밋 `18b0232`, 2026-11-18).
+원본 저장소: `curricenterhscne/cne-design-system` (태그 `v2.1`, 커밋 `d095eef`, 2026-11-18).
 값의 근거는 디자인 업체 최종 가이드(2026-11-17)이고, 글자로 쓰는 색은 모두 대비 4.5:1 이상으로 맞춰 두었다.
 
 ## 먼저 정할 것 — 어디에 적용하나
@@ -23,12 +23,12 @@ description: 충남교육청 고교학점제 포털 「온마당」 디자인 �
 
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/curricenterhscne/cne-design-system@v2.0/tokens/design-tokens.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/curricenterhscne/cne-design-system@v2.0/components/components.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/curricenterhscne/cne-design-system@v2.1/tokens/design-tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/curricenterhscne/cne-design-system@v2.1/components/components.css">
 ```
 
 - **글꼴은 `dynamic-subset` 판을 쓴다.** `pretendardvariable.min.css`(전체판)는 글꼴 파일이 2MB라, 온마당에서 측정했을 때 모바일 첫 화면이 12~13초 걸리고 글꼴이 바뀌며 화면이 밀렸다(CLS 0.2). subset판으로 바꾸자 페이지 무게가 1/3~1/4이 됐다.
-- **CDN은 태그(`@v2.0`)나 커밋 해시로 고정한다.** `@main`은 디자인 시스템이 바뀌는 즉시 모든 사이트에 퍼진다. 고정해 두면 미리 확인한 뒤 해시만 올려 반영할 수 있다.
+- **CDN은 태그(`@v2.1`)나 커밋 해시로 고정한다.** `@main`은 디자인 시스템이 바뀌는 즉시 모든 사이트에 퍼진다. 고정해 두면 미리 확인한 뒤 해시만 올려 반영할 수 있다.
 
 ## 핵심 원칙 — 왜 이렇게 하나
 
@@ -71,7 +71,7 @@ description: 충남교육청 고교학점제 포털 「온마당」 디자인 �
 
 ## 캐릭터 (꾸꾸클럽)
 
-`assets/`에 토꾸미(토끼, `tokkumi.svg`)·팬꾸미(판다, `paenkkumi.svg`)·꾸미(애벌레, `kkumi.svg`)·로고가 있다. CDN: `https://cdn.jsdelivr.net/gh/curricenterhscne/cne-design-system@v2.0/assets/characters/<파일>`.
+`assets/`에 토꾸미(토끼, `tokkumi.svg`)·팬꾸미(판다, `paenkkumi.svg`)·꾸미(애벌레, `kkumi.svg`)·로고가 있다. CDN: `https://cdn.jsdelivr.net/gh/curricenterhscne/cne-design-system@v2.1/assets/characters/<파일>`.
 - 캐릭터는 **장식**이다. `alt=""`와 `aria-hidden="true"`를 붙이거나, 의미가 있으면 이름을 `alt`로 쓴다.
 - 작은 아이콘·판정 결과 자리에는 캐릭터 대신 단순한 아이콘을 쓴다. 캐릭터가 많으면 정보가 묻힌다.
 

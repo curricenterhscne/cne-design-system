@@ -61,7 +61,7 @@ cne-design-system/
 - **캐릭터**: 학생 화면에 적극, 행정 화면(`.surface-admin`)엔 절제.
 - **배지 의미 통일**: ★권장=그린 / ◆핵심=브랜드 블루 / 온라인=라이트 블루.
 - **CDN은 커밋 해시나 태그로 고정**해서 쓴다(`@main`은 바뀌는 즉시 모든 사이트에 퍼진다).
-  예: `https://cdn.jsdelivr.net/gh/curricenterhscne/cne-design-system@v2.0/tokens/design-tokens.css`
+  예: `https://cdn.jsdelivr.net/gh/curricenterhscne/cne-design-system@v2.1/tokens/design-tokens.css`
 
 ---
 

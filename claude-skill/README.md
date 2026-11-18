@@ -23,5 +23,5 @@ cd cne-design-system/claude-skill && zip -qr -X onmadang-design-system.skill onm
 
 DS 값을 바꾸면(v2.1 등) 이 스킬도 함께 고친다.
 - `onmadang-design-system/assets/design-tokens.css` · `components.css` 사본을 새 파일로 바꾼다.
-- `references/palette.md` 표와 SKILL.md의 CDN 태그(`@v2.0`)를 고친다.
+- `references/palette.md` 표와 SKILL.md의 CDN 태그(`@v2.1`)를 고친다.
 - 그다음 위 설치 명령으로 각 컴퓨터에 다시 복사한다.

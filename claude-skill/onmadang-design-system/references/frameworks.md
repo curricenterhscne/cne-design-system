@@ -16,7 +16,7 @@ CDN 3줄(SKILL.md 「빠른 시작」)을 `<head>`에 넣는다. 토큰 → 컴�
 
 - 진입점(`main.jsx`, `App.vue` 등)이나 `index.html`에서 토큰 CSS를 한 번만 불러온다.
 - 컴포넌트 스타일은 `kk-` 클래스를 그대로 쓰거나, CSS Modules 안에서 `var(--color-brand)`처럼 토큰을 참조한다.
-- npm 패키지는 없다. CDN 주소를 쓰거나 `assets/design-tokens.css`를 프로젝트에 복사한다. 복사했다면 맨 위 주석에 **어느 버전(v2.0, 커밋 18b0232)을 복사했는지** 적어 둔다.
+- npm 패키지는 없다. CDN 주소를 쓰거나 `assets/design-tokens.css`를 프로젝트에 복사한다. 복사했다면 맨 위 주석에 **어느 버전(v2.1, 커밋 d095eef)을 복사했는지** 적어 둔다.
 
 ## 4. Tailwind
 
