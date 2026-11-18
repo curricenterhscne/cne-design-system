@@ -172,7 +172,7 @@
 
 /* 인라인 에러/도움말 */
 .kk-field__error { font-size: var(--text-xs); color: var(--kkuk-danger); }
-.kk-field--invalid .kk-input { border: 2px solid var(--color-error-line); }   /* 가이드 Error stroke 2 #FF2B2E */
+.kk-field--invalid .kk-input { border: 2px solid var(--color-error-line); }   /* 가이드 Error stroke 2 #ED0202 */
 .kk-field--warn .kk-input { background: var(--color-warning-bg); }          /* 가이드 Warning #FFDDC8 */
 
 /* =============================================================================

@@ -18,7 +18,7 @@
 | 텍스트(연하게) | #333333 | 메뉴 | | |
 | 텍스트(흐리게) | #727272 | **비활성 글자 전용** (흰 4.81, 옅은 하늘 4.48) | | |
 | 라인 | #E2E4EE | 선 | | |
-| 오류 | #FF2B2E | **테두리 전용** (흰 바탕 글자 3.73 ✗) | | |
+| 오류 | #ED0202 | 흰 4.55 · 검정 4.61 (v2.1. 옛 #FF2B2E는 3.73이라 테두리 전용이었다) | | |
 | 경고 | #FFDDC8 | 경고 바탕 | | 16.4 ✅ |
 | 비활성 단추 | #C8C8C8 | | | |
 
@@ -59,7 +59,7 @@
 | `--color-border` | #E2E4EE |
 | `--color-disabled` | #C8C8C8 |
 | `--color-current` | #78F8A3 (머리글 단추 현재 위치) |
-| `--color-error-line` / `--color-warning-bg` | #FF2B2E / #FFDDC8 |
+| `--color-error-line` / `--color-warning-bg` | #ED0202 / #FFDDC8 |
 | `--color-focus-ring` + `--focus-width` | #526ADC, 3px |
 
 ## 대메뉴별 대표색 (온마당)
